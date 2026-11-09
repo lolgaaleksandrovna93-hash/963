@@ -11,6 +11,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      - name: Make gradlew executable
+        run: chmod +x gradlew
       - name: Start SUT
         run: java -jar "artifacts/app-replan-delivery.jar" &
       - name: Wait for SUT
